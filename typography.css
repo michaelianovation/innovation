@@ -1,0 +1,200 @@
+/* IA NOVATION — values transcribed from the supplied typography chart.
+   Content roles live here; section/layout rules must not override them. */
+:root {
+  --type-h1: 42px;
+  --type-h2: 34px;
+  --type-h3: 18px;
+  --type-body: 15px;
+  --type-lead: 17px;
+  --type-eyebrow: 12px;
+  --type-micro: 12px;
+  --text: #ffffff;
+  --text-secondary: #e7ebf5;
+  --text-discreet: #b7c4d8;
+}
+
+body {
+  font-family: Poppins, sans-serif;
+  font-weight: 400;
+  font-size: var(--type-body);
+  line-height: 1.55;
+  letter-spacing: 0;
+}
+p { color: var(--text-secondary); }
+button, input, select, textarea { font-family: inherit; }
+b, strong { font-weight: 600; }
+
+h1 {
+  font-size: var(--type-h1);
+  font-weight: 600;
+  line-height: 1.12;
+  letter-spacing: -0.8px;
+}
+h2 {
+  font-size: var(--type-h2);
+  font-weight: 600;
+  line-height: 1.18;
+  letter-spacing: -0.5px;
+}
+h3 {
+  font-size: var(--type-h3);
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: -0.2px;
+}
+h4 {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0;
+}
+h5 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 0;
+}
+h6 {
+  font-size: var(--type-micro);
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 1.5px;
+}
+h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
+  font-weight: inherit;
+}
+
+.eyebrow {
+  font-size: var(--type-eyebrow);
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 3px;
+}
+.lead, .intro, .hero-description, .section-subtitle {
+  font-size: var(--type-lead);
+  font-weight: 400;
+  line-height: 1.55;
+  letter-spacing: 0;
+}
+.card-text, .card p, .card li, .solution-card p, .cta-benefits {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+small, .brand small, .footer-top p, .footer-top > a:last-child, .footer-bottom,
+.form-note, #form-status, .partners span {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.45;
+  letter-spacing: 0;
+}
+.button, .header-cta.button, .menu-toggle {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+.header-cta.button { min-height: 44px; }
+nav a {
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+.hero-promises p, .contact-detail p, form > p {
+  font-size: var(--type-body);
+  font-weight: 400;
+  line-height: 1.55;
+  letter-spacing: 0;
+}
+form > .form-note, form > #form-status {
+  font-size: 12px;
+  line-height: 1.45;
+}
+.hero-promises b {
+  font-size: var(--type-h3);
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: -0.2px;
+}
+form label {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 0;
+}
+input, select, textarea {
+  font-size: var(--type-body);
+  font-weight: 400;
+  line-height: 1.55;
+  letter-spacing: 0;
+}
+.step-index {
+  font-size: var(--type-micro);
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 1.5px;
+}
+.training-benefits strong {
+  font-size: var(--type-h2);
+  font-weight: 600;
+  line-height: 1.18;
+  letter-spacing: -0.5px;
+}
+.training-benefits span {
+  font-size: var(--type-body);
+  font-weight: 400;
+  line-height: 1.55;
+  letter-spacing: 0;
+}
+
+@media (max-width: 1199px) {
+  :root { --type-h1: 36px; --type-h2: 30px; --type-h3: 17px; --type-lead: 15px; }
+}
+@media (max-width: 767px) {
+  :root {
+    --type-h1: 30px;
+    --type-h2: 26px;
+    --type-h3: 17px;
+    --type-body: 15px;
+    --type-eyebrow: 11px;
+    --type-micro: 11px;
+  }
+}
+
+/* At narrow tablet widths, preserve legible type instead of shrinking it. */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .header-cta.button { display: none; }
+  .menu-toggle {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 9px 14px;
+    background: #041426cc;
+    border: 1px solid #5f6b86;
+    border-radius: 24px;
+    color: #fff;
+  }
+  nav {
+    display: none;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    height: auto;
+    background: #071b3c;
+    padding: 16px 20px;
+    border-block: 1px solid #2c4768;
+    box-shadow: 0 15px 30px #0005;
+  }
+  nav.open { display: flex; flex-direction: column; align-items: stretch; gap: 0; }
+  nav a { padding: 14px; }
+  nav a[aria-current]::after { bottom: 7px; left: 14px; right: auto; width: 35px; }
+}
+
+.header-inner > .brand { padding-block: 12px; }
+@media (max-width: 767px) {
+  /* The full tagline stays legible in the footer; keep mobile navigation compact. */
+  .header-inner > .brand small { display: none; }
+}
